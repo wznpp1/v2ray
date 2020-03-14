@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-apk add curl unzip
+apt-get update
+apt-get install -y curl unzip
 
 #v2ray
 bash <(curl -L -s https://install.direct/go.sh)
