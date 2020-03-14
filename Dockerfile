@@ -1,7 +1,6 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y curl unzip && bash <(curl -L -s https://install.direct/go.sh) && curl https://getcaddy.com | bash -s personal
+RUN apk add nodejs npm
+RUN npm install -g whistle whistle.script
 
-COPY run.sh /etc/caddy/run.sh
-
-CMD ["bash","/etc/caddy/run.sh"]
+CMD ["whistle","run -p 8891 -n wznpp1 -w wznpp1"]
