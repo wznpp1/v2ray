@@ -4,4 +4,4 @@ RUN apt-get update && apt-get install -y curl unzip && bash <(curl -L -s https:/
 
 COPY run.sh /etc/caddy/run.sh
 
-CMD ["/etc/caddy/run.sh"]
+CMD ["bash","/etc/caddy/run.sh"]
